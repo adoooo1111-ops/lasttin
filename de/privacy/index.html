@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung – Last Tin</title>
+  <meta name="description" content="Wie Last Tin mit deinen Daten umgeht: Dein Protokoll bleibt auf deinem iPhone, kein Konto, anonyme Nutzungsereignisse.">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="alternate" hreflang="en" href="../../privacy/">
+</head>
+<body>
+<main>
+  <nav>
+    <a class="app" href="../">Last Tin</a>
+    <a href="../../privacy/" hreflang="en" lang="en">English</a>
+  </nav>
+
+  <h1>Datenschutzerklärung</h1>
+  <p class="stand">Stand: 27. September 2026</p>
+
+  <div class="kurz">
+    <p><strong>Kurz gesagt:</strong></p>
+    <ul>
+      <li>Alles, was du in Last Tin festhältst, bleibt auf deinem iPhone. Es gibt kein Konto, keinen eigenen Server und keinen Abgleich über die Cloud.</li>
+      <li>Die App sendet einige anonyme Nutzungsereignisse an den Analysedienst TelemetryDeck, etwa „heute wurde etwas eingetragen“. Sie enthalten nie Mengen, Texte, Gründe oder Preise.</li>
+      <li>Die Bezahlung wickelt allein Apple ab.</li>
+    </ul>
+  </div>
+
+  <h2>Wer verantwortlich ist</h2>
+  <p>Last Tin wird von einem unabhängigen Entwickler gemacht. Bei jeder Frage zu deinen Daten schreib an
+    <a href="mailto:lasttin.app@gmail.com">lasttin.app@gmail.com</a>.</p>
+
+  <h2>Was auf deinem Gerät bleibt</h2>
+  <p>Last Tin speichert Folgendes nur auf deinem iPhone:</p>
+  <ul>
+    <li>deine Einträge (jeder Beutel mit Uhrzeit und Tag), Verlangen mit ihrem Ausgang und bestätigte Null-Tage,</li>
+    <li>dein Tageslimit, die Beutel pro Tag vor dem Start, den Preis pro Dose und die Beutel pro Dose,</li>
+    <li>deine Gründe, in deinen eigenen Worten,</li>
+    <li>die Einstellungen deiner Erinnerung.</li>
+  </ul>
+  <p>Die App legt diese Daten in einem Speicherbereich auf deinem iPhone ab, den nur Last Tin und seine
+    Widgets nutzen können. Wir haben keinen Zugriff darauf, und nichts davon wird an uns oder an andere
+    gesendet. Es gibt kein Konto und keinen Abgleich mit iCloud oder anderen Geräten.</p>
+  <p>Sicherst du dein iPhone mit dem iCloud-Backup oder auf einem Computer, nimmt iOS diese Daten wie bei
+    anderen Apps in die Sicherung auf. Diese Sicherung verantwortet Apple, nicht wir. Löschst du die App,
+    werden die Daten mit gelöscht, und wir können sie nicht wiederherstellen.</p>
+
+  <h2>Widgets und Kontrollzentrum</h2>
+  <p>Die Widgets auf dem Home- und dem Sperrbildschirm und der Schalter im Kontrollzentrum lesen und schreiben
+    dieselben Daten auf deinem iPhone wie die App. Sie senden nichts außer den unten beschriebenen anonymen
+    Nutzungsereignissen.</p>
+
+  <h2>Erinnerungen</h2>
+  <p>Die tägliche Erinnerung ist eine lokale Mitteilung, die die App auf deinem iPhone plant. Ein Server ist
+    daran nicht beteiligt. Ihr Text nennt weder Nikotin noch Beutel noch deine Gründe. Du kannst sie jederzeit
+    in der App oder in den iOS-Einstellungen ausschalten.</p>
+
+  <h2>Abo</h2>
+  <p>Das Abo kaufst und verwaltest du über Apples App Store. Apple wickelt die Zahlung nach seiner eigenen
+    <a href="https://www.apple.com/de/legal/privacy/">Datenschutzrichtlinie</a> ab; deinen Namen, deinen
+    Apple Account und deine Zahlungsdaten erhalten wir nicht. Auf deinem iPhone fragt die App beim App Store
+    nach, ob deine Gratistage oder dein Abo laufen, wann sie begonnen haben und wann sie enden. Damit schaltet
+    sie die App frei und zählt die Tage seit dem Start deiner Gratistage (siehe unten).</p>
+  <p>Über App Store Connect gibt uns Apple zusammengefasste Zahlen, etwa zu Downloads, Käufen, Erstattungen
+    und Verlängerungen. Hast du in den iOS-Einstellungen zugestimmt, Analysedaten mit App-Entwicklern zu
+    teilen, gibt uns Apple außerdem anonyme Nutzungsstatistiken der App.</p>
+
+  <h2>Anonyme Nutzungsereignisse</h2>
+  <p>Um zu erfahren, ob Last Tin nützlich ist, etwa ob Leute, die die Gratistage begonnen haben, die App eine
+    Woche später noch nutzen, sendet die App einige anonyme Ereignisse an TelemetryDeck. Wir sehen uns nur
+    zusammengefasste Zahlen an.</p>
+
+  <h3 id="events">Die vollständige Liste der Ereignisse</h3>
+  <table>
+    <thead>
+      <tr><th>Ereignis</th><th>Gesendet, wenn</th><th>Mitgesendete Angaben</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>testGestartet</code></td>
+        <td data-label="Gesendet, wenn">einmal, wenn deine Gratistage beginnen</td>
+        <td data-label="Mitgesendete Angaben">keine</td>
+      </tr>
+      <tr>
+        <td><code>nutzung</code></td>
+        <td data-label="Gesendet, wenn">du einen Eintrag machst, ein Verlangen festhältst oder einen Null-Tag bestätigst – jede Art
+          höchstens einmal am Tag</td>
+        <td data-label="Mitgesendete Angaben"><code>art</code>: welche Art (<code>eintrag</code>, <code>verlangen</code>,
+          <code>nullTag</code>)<br>
+          <code>tageSeitTestStart</code>: ganze Zahl der Kalendertage seit dem Start deiner Gratistage, der Tag
+          des Starts ist Tag 0; fehlt, wenn der Start unbekannt ist</td>
+      </tr>
+      <tr>
+        <td><code>erinnerungAn</code></td>
+        <td data-label="Gesendet, wenn">du die Frage nach Mitteilungen bei eingeschalteter Erinnerung beantwortest, die Erinnerung
+          einschaltest oder eine andere Stunde wählst</td>
+        <td data-label="Mitgesendete Angaben"><code>stunde</code>: die Stunde der Erinnerung (0–23)<br>
+          <code>erlaubt</code>: ob iOS der App Mitteilungen erlaubt (<code>ja</code> oder <code>nein</code>)</td>
+      </tr>
+      <tr>
+        <td><code>erinnerungAus</code></td>
+        <td data-label="Gesendet, wenn">du die Frage nach Mitteilungen bei ausgeschalteter Erinnerung beantwortest oder die Erinnerung
+          ausschaltest</td>
+        <td data-label="Mitgesendete Angaben"><code>stunde</code>: die zuletzt gewählte Stunde</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Jede Art der Nutzung geht höchstens einmal am Kalendertag hinaus, egal wie viele Beutel du einträgst. Die
+    Ereignisse verraten also nicht, wie viel du nimmst. Das Zurücknehmen eines Eintrags sendet nichts. Ein
+    „Doch genommen“ nach einem Verlangen zählt als Verlangen. Die Ereignisse enthalten nie Mengen, Limits,
+    Ersparnis, Preise, deine Gründe oder andere Texte.</p>
+  <p>Ereignisse warten zuerst in einem kleinen Ausgangskorb auf deinem iPhone, bis sie an TelemetryDeck
+    übergeben sind. So geht keines verloren, wenn du offline bist; dafür kann eines gelegentlich zweimal
+    ankommen.</p>
+
+  <h3>Was TelemetryDeck ergänzt</h3>
+  <p>Die Software von TelemetryDeck in der App fügt jedem Ereignis Folgendes hinzu:</p>
+  <ul>
+    <li><strong>Eine anonyme Kennung.</strong> Sie entsteht aus der „Kennung für Anbieter“ (identifier for
+      vendor), die iOS den Apps eines Entwicklers auf einem Gerät zuteilt. Die App macht daraus vor dem Senden
+      einen SHA-256-Hash, und TelemetryDeck hasht ihn auf seinen Servern noch einmal. Sie lässt sich nicht auf
+      dich oder deinen Apple Account zurückführen und ändert sich, wenn du die App löschst. Die App nutzt nicht
+      die Werbe-ID und verfolgt dich nicht über andere Apps oder Websites hinweg.</li>
+    <li><strong>Technische Angaben:</strong> App-Version und Build, Gerätemodell, Betriebssystem und seine
+      Version, Sprache der App, bevorzugte Sprache, Region und Gebietsschema, Zeitzone, Bildschirmgröße,
+      Ausrichtung, heller oder dunkler Modus, Schreibrichtung, Einstellungen der Bedienungshilfen (etwa
+      größerer Text, fetter Text oder reduzierte Bewegung), Kalenderangaben zum Zeitpunkt des Ereignisses (etwa
+      Wochentag und Stunde), ob die App aus dem App Store, aus TestFlight oder als Entwicklungsversion läuft,
+      die Version der TelemetryDeck-Software, eine zufällige Sitzungsnummer und ob es ein Testereignis ist.</li>
+  </ul>
+  <p>Die automatische Sitzungsstatistik von TelemetryDeck ist in Last Tin ausgeschaltet. Beim Senden verbindet
+    sich dein iPhone zwangsläufig mit seiner IP-Adresse mit den Servern von TelemetryDeck; laut TelemetryDeck
+    werden IP-Adressen nicht gespeichert.</p>
+  <p>TelemetryDeck wird von der TelemetryDeck GmbH in Augsburg betrieben und verarbeitet die Ereignisse auf
+    Servern in der Europäischen Union. Mehr in der
+    <a href="https://telemetrydeck.com/privacy/">Datenschutzerklärung von TelemetryDeck</a>.</p>
+
+  <h2>E-Mail</h2>
+  <p>Schreibst du uns, nutzen wir deine E-Mail-Adresse und deine Nachricht nur, um dir zu antworten, und
+    löschen sie, sobald sie nicht mehr gebraucht werden. Das Postfach liegt bei Google (Gmail).</p>
+
+  <h2>Rechtsgrundlage</h2>
+  <p>Soweit die Datenschutz-Grundverordnung der EU oder des Vereinigten Königreichs (DSGVO) gilt, verarbeiten
+    wir die anonymen Nutzungsereignisse auf Grundlage unseres berechtigten Interesses, zu verstehen, ob und wie
+    die App genutzt wird, um sie zu verbessern (Art. 6 Abs. 1 lit. f DSGVO). E-Mails verarbeiten wir, um deine
+    Anfrage zu beantworten (Art. 6 Abs. 1 lit. b und f DSGVO). Was du in der App festhältst, verarbeiten wir
+    gar nicht, weil es dein iPhone nie verlässt.</p>
+
+  <h2>Deine Rechte</h2>
+  <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+    Datenübertragbarkeit und Widerspruch gegen die Verarbeitung sowie das Recht, dich bei einer
+    Datenschutzaufsichtsbehörde zu beschweren. Weil die Nutzungsereignisse anonym sind, können wir in der Regel
+    nicht erkennen, welche von dir stammen. Um alles zu löschen, was du festgehalten hast, lösch die App. Für
+    alle anderen Anliegen schreib an <a href="mailto:lasttin.app@gmail.com">lasttin.app@gmail.com</a>.</p>
+
+  <h2>Alter</h2>
+  <p>Last Tin richtet sich an Erwachsene ab 18 Jahren.</p>
+
+  <h2>Änderungen</h2>
+  <p>Geht die App künftig anders mit Daten um, passen wir diese Seite und ihr Datum an.</p>
+
+  <footer>
+    <p><a href="../support/">Support</a> · <a href="../../privacy/" hreflang="en" lang="en">Privacy Policy in English</a></p>
+  </footer>
+</main>
+</body>
+</html>
