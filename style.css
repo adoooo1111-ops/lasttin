@@ -110,40 +110,13 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Auf schmalen Bildschirmen steht jedes Ereignis als eigener Block untereinander, mit der
-   Spaltenüberschrift vor jeder Angabe. */
-@media (max-width: 600px) {
-  table,
-  thead,
-  tbody,
-  tr,
-  th,
-  td {
-    display: block;
-  }
+/* Die Tabelle der Ereignisse bleibt eine Tabelle; auf schmalen Bildschirmen lässt sie sich waagerecht
+   scrollen. */
+.tabelle {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
-  thead {
-    display: none;
-  }
-
-  tr {
-    border-bottom: 1px solid var(--rahmen);
-    padding: 0.5rem 0;
-  }
-
-  td {
-    border: none;
-    padding: 0.2rem 0;
-    overflow-wrap: break-word;
-  }
-
-  td:first-child {
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-
-  td[data-label]::before {
-    content: attr(data-label) ": ";
-    color: var(--leise);
-  }
+.tabelle table {
+  min-width: 34rem;
 }

@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutzerklärung – Last Tin</title>
-  <meta name="description" content="Wie Last Tin mit deinen Daten umgeht: Dein Protokoll bleibt auf deinem iPhone, kein Konto, anonyme Nutzungsereignisse.">
+  <meta name="description" content="Wie Last Tin mit deinen Daten umgeht: Dein Protokoll bleibt auf deinem iPhone, kein Konto, wenige pseudonyme Nutzungsereignisse, die du abschalten kannst.">
   <link rel="stylesheet" href="../../style.css">
-  <link rel="alternate" hreflang="en" href="../../privacy/">
+  <link rel="alternate" hreflang="en" href="https://adoooo1111-ops.github.io/lasttin/privacy/">
+  <link rel="alternate" hreflang="de" href="https://adoooo1111-ops.github.io/lasttin/de/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://adoooo1111-ops.github.io/lasttin/privacy/">
 </head>
 <body>
 <main>
@@ -21,8 +23,11 @@
   <div class="kurz">
     <p><strong>Kurz gesagt:</strong></p>
     <ul>
-      <li>Alles, was du in Last Tin festhältst, bleibt auf deinem iPhone. Es gibt kein Konto, keinen eigenen Server und keinen Abgleich über die Cloud.</li>
-      <li>Die App sendet einige anonyme Nutzungsereignisse an den Analysedienst TelemetryDeck, etwa „heute wurde etwas eingetragen“. Sie enthalten nie Mengen, Texte, Gründe oder Preise.</li>
+      <li>Alles, was du in Last Tin festhältst, bleibt auf deinem iPhone. Es gibt kein Konto, keinen eigenen
+        Server und keinen Abgleich über die Cloud.</li>
+      <li>Die App sendet einige Nutzungsereignisse unter einer pseudonymen Kennung an den Analysedienst
+        TelemetryDeck, etwa „heute wurde etwas eingetragen“. Sie enthalten nie Mengen, Texte, Gründe oder
+        Preise, und du kannst sie in der App abschalten.</li>
       <li>Die Bezahlung wickelt allein Apple ab.</li>
     </ul>
   </div>
@@ -48,7 +53,7 @@
 
   <h2>Widgets und Kontrollzentrum</h2>
   <p>Die Widgets auf dem Home- und dem Sperrbildschirm und der Schalter im Kontrollzentrum lesen und schreiben
-    dieselben Daten auf deinem iPhone wie die App. Sie senden nichts außer den unten beschriebenen anonymen
+    dieselben Daten auf deinem iPhone wie die App. Sie senden nichts außer den unten beschriebenen
     Nutzungsereignissen.</p>
 
   <h2>Erinnerungen</h2>
@@ -66,12 +71,13 @@
     und Verlängerungen. Hast du in den iOS-Einstellungen zugestimmt, Analysedaten mit App-Entwicklern zu
     teilen, gibt uns Apple außerdem anonyme Nutzungsstatistiken der App.</p>
 
-  <h2>Anonyme Nutzungsereignisse</h2>
+  <h2 id="nutzungsereignisse">Nutzungsereignisse</h2>
   <p>Um zu erfahren, ob Last Tin nützlich ist, etwa ob Leute, die die Gratistage begonnen haben, die App eine
-    Woche später noch nutzen, sendet die App einige anonyme Ereignisse an TelemetryDeck. Wir sehen uns nur
-    zusammengefasste Zahlen an.</p>
+    Woche später noch nutzen, sendet die App einige Nutzungsereignisse unter einer pseudonymen Kennung (siehe
+    unten) an TelemetryDeck. Wir sehen uns nur zusammengefasste Zahlen an.</p>
 
   <h3 id="events">Die vollständige Liste der Ereignisse</h3>
+  <div class="tabelle">
   <table>
     <thead>
       <tr><th>Ereignis</th><th>Gesendet, wenn</th><th>Mitgesendete Angaben</th></tr>
@@ -79,33 +85,33 @@
     <tbody>
       <tr>
         <td><code>testGestartet</code></td>
-        <td data-label="Gesendet, wenn">einmal, wenn deine Gratistage beginnen</td>
-        <td data-label="Mitgesendete Angaben">keine</td>
+        <td>einmal, wenn deine Gratistage beginnen</td>
+        <td>keine</td>
       </tr>
       <tr>
         <td><code>nutzung</code></td>
-        <td data-label="Gesendet, wenn">du einen Eintrag machst, ein Verlangen festhältst oder einen Null-Tag bestätigst – jede Art
+        <td>du einen Eintrag machst, ein Verlangen festhältst oder einen Null-Tag bestätigst – jede Art
           höchstens einmal am Tag</td>
-        <td data-label="Mitgesendete Angaben"><code>art</code>: welche Art (<code>eintrag</code>, <code>verlangen</code>,
+        <td><code>art</code>: welche Art (<code>eintrag</code>, <code>verlangen</code>,
           <code>nullTag</code>)<br>
           <code>tageSeitTestStart</code>: ganze Zahl der Kalendertage seit dem Start deiner Gratistage, der Tag
           des Starts ist Tag 0; fehlt, wenn der Start unbekannt ist</td>
       </tr>
       <tr>
         <td><code>erinnerungAn</code></td>
-        <td data-label="Gesendet, wenn">du die Frage nach Mitteilungen bei eingeschalteter Erinnerung beantwortest, die Erinnerung
+        <td>du die Frage nach Mitteilungen bei eingeschalteter Erinnerung beantwortest, die Erinnerung
           einschaltest oder eine andere Stunde wählst</td>
-        <td data-label="Mitgesendete Angaben"><code>stunde</code>: die Stunde der Erinnerung (0–23)<br>
+        <td><code>stunde</code>: die Stunde der Erinnerung (0–23)<br>
           <code>erlaubt</code>: ob iOS der App Mitteilungen erlaubt (<code>ja</code> oder <code>nein</code>)</td>
       </tr>
       <tr>
         <td><code>erinnerungAus</code></td>
-        <td data-label="Gesendet, wenn">du die Frage nach Mitteilungen bei ausgeschalteter Erinnerung beantwortest oder die Erinnerung
-          ausschaltest</td>
-        <td data-label="Mitgesendete Angaben"><code>stunde</code>: die zuletzt gewählte Stunde</td>
+        <td>du die Erinnerung ausschaltest</td>
+        <td><code>stunde</code>: die zuletzt gewählte Stunde</td>
       </tr>
     </tbody>
   </table>
+  </div>
   <p>Jede Art der Nutzung geht höchstens einmal am Kalendertag hinaus, egal wie viele Beutel du einträgst. Die
     Ereignisse verraten also nicht, wie viel du nimmst. Das Zurücknehmen eines Eintrags sendet nichts. Ein
     „Doch genommen“ nach einem Verlangen zählt als Verlangen. Die Ereignisse enthalten nie Mengen, Limits,
@@ -117,42 +123,61 @@
   <h3>Was TelemetryDeck ergänzt</h3>
   <p>Die Software von TelemetryDeck in der App fügt jedem Ereignis Folgendes hinzu:</p>
   <ul>
-    <li><strong>Eine anonyme Kennung.</strong> Sie entsteht aus der „Kennung für Anbieter“ (identifier for
+    <li><strong>Eine pseudonyme Kennung.</strong> Sie entsteht aus der „Kennung für Anbieter“ (identifier for
       vendor), die iOS den Apps eines Entwicklers auf einem Gerät zuteilt. Die App macht daraus vor dem Senden
-      einen SHA-256-Hash, und TelemetryDeck hasht ihn auf seinen Servern noch einmal. Sie lässt sich nicht auf
-      dich oder deinen Apple Account zurückführen und ändert sich, wenn du die App löschst. Die App nutzt nicht
-      die Werbe-ID und verfolgt dich nicht über andere Apps oder Websites hinweg.</li>
-    <li><strong>Technische Angaben:</strong> App-Version und Build, Gerätemodell, Betriebssystem und seine
-      Version, Sprache der App, bevorzugte Sprache, Region und Gebietsschema, Zeitzone, Bildschirmgröße,
-      Ausrichtung, heller oder dunkler Modus, Schreibrichtung, Einstellungen der Bedienungshilfen (etwa
-      größerer Text, fetter Text oder reduzierte Bewegung), Kalenderangaben zum Zeitpunkt des Ereignisses (etwa
-      Wochentag und Stunde), ob die App aus dem App Store, aus TestFlight oder als Entwicklungsversion läuft,
-      die Version der TelemetryDeck-Software, eine zufällige Sitzungsnummer und ob es ein Testereignis ist.</li>
+      einen SHA-256-Hash, und TelemetryDeck hasht ihn auf seinen Servern noch einmal. Sie enthält weder deinen
+      Namen noch deinen Apple Account, bleibt aber für alle Ereignisse von deinem iPhone gleich. Sie ändert sich
+      erst, wenn alle Apps unseres Entwicklerkontos vom iPhone entfernt sind. Die App nutzt nicht die Werbe-ID
+      und verfolgt dich nicht über andere Apps oder Websites hinweg.</li>
+    <li><strong>Den Zeitpunkt des Sendens.</strong> Weil Ereignisse im Ausgangskorb warten können, kann er
+      später liegen als die Nutzung selbst.</li>
+    <li><strong>Technische Angaben:</strong> App-Version und Build, Gerätemodell, Prozessorarchitektur,
+      Plattform, Betriebssystem und seine Version, Sprache der App, bevorzugte Sprache, Region und
+      Gebietsschema, Zeitzone, Bildschirmgröße, Ausrichtung, heller oder dunkler Modus, Schreibrichtung,
+      Einstellungen der Bedienungshilfen (etwa größerer Text, fetter Text oder reduzierte Bewegung),
+      Kalenderangaben zum Zeitpunkt des Sendens (etwa Wochentag und Stunde), ob die App aus dem App Store, aus
+      TestFlight oder als Entwicklungsversion läuft, bei Ereignissen aus einem Widget oder dem Kontrollzentrum
+      die Art der Erweiterung, die es gesendet hat, die Version der TelemetryDeck-Software, eine zufällige
+      Sitzungsnummer und ob es ein Testereignis ist.</li>
   </ul>
-  <p>Die automatische Sitzungsstatistik von TelemetryDeck ist in Last Tin ausgeschaltet. Beim Senden verbindet
-    sich dein iPhone zwangsläufig mit seiner IP-Adresse mit den Servern von TelemetryDeck; laut TelemetryDeck
-    werden IP-Adressen nicht gespeichert.</p>
+  <p>Die Software von TelemetryDeck würde jedem Ereignis außerdem eine Sitzungsstatistik beifügen: das Datum
+    der ersten Sitzung, die Zahl der Tage und Sitzungen mit Nutzung und die Dauer der Sitzungen. Last Tin
+    schaltet das ab und sendet diese Felder leer. Eine eigene Liste der Tage, an denen sie aktiv war, führt die
+    Software im Speicher der App auf deinem iPhone; diese Liste wird nicht gesendet.</p>
+  <p>Beim Senden verbindet sich dein iPhone zwangsläufig mit seiner IP-Adresse mit den Servern von
+    TelemetryDeck; laut TelemetryDeck werden IP-Adressen nicht gespeichert.</p>
   <p>TelemetryDeck wird von der TelemetryDeck GmbH in Augsburg betrieben und verarbeitet die Ereignisse auf
-    Servern in der Europäischen Union. Mehr in der
-    <a href="https://telemetrydeck.com/privacy/">Datenschutzerklärung von TelemetryDeck</a>.</p>
+    Servern in der Europäischen Union. Für gespeicherte Ereignisse hat TelemetryDeck derzeit keine feste
+    Löschfrist und rechnet mit einer Löschung nach sieben bis zehn Jahren. Mehr in den
+    <a href="https://telemetrydeck.com/docs/guides/privacy-faq/">Datenschutz-FAQ von TelemetryDeck</a>.</p>
+
+  <h3 id="widerspruch">Nutzungsereignisse abschalten</h3>
+  <p>Du kannst jederzeit widersprechen: Öffne in der App die Einstellungen und schalte
+    <strong>Nutzungsstatistik teilen</strong> aus. Ab dann legt die App keine Ereignisse mehr an und sendet
+    keine, auch nicht aus Widgets oder dem Kontrollzentrum, und verwirft die Ereignisse, die noch im
+    Ausgangskorb warten. Was in den Sekunden davor an TelemetryDeck übergeben wurde, kann noch ankommen. Du
+    kannst es jederzeit wieder einschalten.</p>
 
   <h2>E-Mail</h2>
   <p>Schreibst du uns, nutzen wir deine E-Mail-Adresse und deine Nachricht nur, um dir zu antworten, und
     löschen sie, sobald sie nicht mehr gebraucht werden. Das Postfach liegt bei Google (Gmail).</p>
 
   <h2>Rechtsgrundlage</h2>
-  <p>Soweit die Datenschutz-Grundverordnung der EU oder des Vereinigten Königreichs (DSGVO) gilt, verarbeiten
-    wir die anonymen Nutzungsereignisse auf Grundlage unseres berechtigten Interesses, zu verstehen, ob und wie
-    die App genutzt wird, um sie zu verbessern (Art. 6 Abs. 1 lit. f DSGVO). E-Mails verarbeiten wir, um deine
-    Anfrage zu beantworten (Art. 6 Abs. 1 lit. b und f DSGVO). Was du in der App festhältst, verarbeiten wir
-    gar nicht, weil es dein iPhone nie verlässt.</p>
+  <p>Last Tin wird aus Deutschland betrieben, daher gilt die Datenschutz-Grundverordnung (DSGVO). Die
+    Nutzungsereignisse verarbeiten wir auf Grundlage unseres berechtigten Interesses, zu verstehen, ob und wie
+    die App genutzt wird, um sie zu verbessern (Art. 6 Abs. 1 lit. f DSGVO); widersprechen kannst du mit dem
+    oben beschriebenen Schalter. E-Mails verarbeiten wir, um deine Anfrage zu beantworten (Art. 6 Abs. 1
+    lit. b und f DSGVO). Was du in der App festhältst, verarbeiten wir gar nicht, weil es dein iPhone nie
+    verlässt.</p>
 
   <h2>Deine Rechte</h2>
   <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
     Datenübertragbarkeit und Widerspruch gegen die Verarbeitung sowie das Recht, dich bei einer
-    Datenschutzaufsichtsbehörde zu beschweren. Weil die Nutzungsereignisse anonym sind, können wir in der Regel
-    nicht erkennen, welche von dir stammen. Um alles zu löschen, was du festgehalten hast, lösch die App. Für
-    alle anderen Anliegen schreib an <a href="mailto:lasttin.app@gmail.com">lasttin.app@gmail.com</a>.</p>
+    Datenschutzaufsichtsbehörde zu beschweren. Um den Nutzungsereignissen zu widersprechen, schalte
+    <a href="#widerspruch">Nutzungsstatistik teilen</a> aus. Wir sehen nicht, welche Kennung zu dir gehört, und
+    können deine Ereignisse bei TelemetryDeck deshalb in der Regel nicht selbst finden. Um alles zu löschen, was
+    du festgehalten hast, lösch die App. Für alle anderen Anliegen schreib an
+    <a href="mailto:lasttin.app@gmail.com">lasttin.app@gmail.com</a>.</p>
 
   <h2>Alter</h2>
   <p>Last Tin richtet sich an Erwachsene ab 18 Jahren.</p>
@@ -161,7 +186,8 @@
   <p>Geht die App künftig anders mit Daten um, passen wir diese Seite und ihr Datum an.</p>
 
   <footer>
-    <p><a href="../support/">Support</a> · <a href="../../privacy/" hreflang="en" lang="en">Privacy Policy in English</a></p>
+    <p><a href="../support/">Support</a> · <a href="../../privacy/" hreflang="en" lang="en">Privacy Policy in
+      English</a></p>
   </footer>
 </main>
 </body>

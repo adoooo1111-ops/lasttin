@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy – Last Tin</title>
-  <meta name="description" content="How Last Tin handles your data: your log stays on your iPhone, no account, anonymous usage events.">
+  <meta name="description" content="How Last Tin handles your data: your log stays on your iPhone, no account, few pseudonymous usage events you can turn off.">
   <link rel="stylesheet" href="../style.css">
-  <link rel="alternate" hreflang="de" href="../de/privacy/">
+  <link rel="alternate" hreflang="en" href="https://adoooo1111-ops.github.io/lasttin/privacy/">
+  <link rel="alternate" hreflang="de" href="https://adoooo1111-ops.github.io/lasttin/de/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://adoooo1111-ops.github.io/lasttin/privacy/">
 </head>
 <body>
 <main>
@@ -21,8 +23,11 @@
   <div class="kurz">
     <p><strong>In short:</strong></p>
     <ul>
-      <li>Everything you log in Last Tin stays on your iPhone. There is no account, no server of ours and no cloud sync.</li>
-      <li>The app sends a few anonymous usage events to the analytics service TelemetryDeck, for example “an entry was made today”. They never contain amounts, texts, reasons or prices.</li>
+      <li>Everything you log in Last Tin stays on your iPhone. There is no account, no server of ours and no
+        cloud sync.</li>
+      <li>The app sends a few usage events under a pseudonymous identifier to the analytics service
+        TelemetryDeck, for example “an entry was made today”. They never contain amounts, texts, reasons or
+        prices, and you can turn them off in the app.</li>
       <li>Payments are handled entirely by Apple.</li>
     </ul>
   </div>
@@ -48,7 +53,7 @@
 
   <h2>Widgets and Control Center</h2>
   <p>The widgets on the Home Screen and Lock Screen and the Control Center button read and write the same data
-    on your iPhone as the app. They send nothing except the anonymous usage events described below.</p>
+    on your iPhone as the app. They send nothing except the usage events described below.</p>
 
   <h2>Reminders</h2>
   <p>The daily reminder is a local notification that the app schedules on your iPhone. No server is involved.
@@ -65,11 +70,13 @@
     renewals. If you have chosen in the iOS Settings to share analytics with app developers, Apple also
     gives us anonymous app usage statistics.</p>
 
-  <h2>Anonymous usage events</h2>
+  <h2 id="usage-events">Usage events</h2>
   <p>To know whether Last Tin is useful, for example whether people who started the free trial still use it a
-    week later, the app sends a few anonymous events to TelemetryDeck. We only look at aggregated numbers.</p>
+    week later, the app sends a few usage events to TelemetryDeck under a pseudonymous identifier (see below).
+    We only look at aggregated numbers.</p>
 
   <h3 id="events">The complete list of events</h3>
+  <div class="tabelle">
   <table>
     <thead>
       <tr><th>Event</th><th>Sent when</th><th>Details sent with it</th></tr>
@@ -77,32 +84,33 @@
     <tbody>
       <tr>
         <td><code>testGestartet</code></td>
-        <td data-label="Sent when">once, when your free trial starts</td>
-        <td data-label="Details sent with it">none</td>
+        <td>once, when your free trial starts</td>
+        <td>none</td>
       </tr>
       <tr>
         <td><code>nutzung</code></td>
-        <td data-label="Sent when">when you add an entry, note a craving or confirm a zero day – each kind at most once a day</td>
-        <td data-label="Details sent with it"><code>art</code>: which kind (<code>eintrag</code> entry, <code>verlangen</code> craving,
+        <td>when you add an entry, note a craving or confirm a zero day – each kind at most once a day</td>
+        <td><code>art</code>: which kind (<code>eintrag</code> entry, <code>verlangen</code> craving,
           <code>nullTag</code> zero day)<br>
           <code>tageSeitTestStart</code>: whole number of calendar days since your trial started, the day of the
           start being day 0; missing if the start is unknown</td>
       </tr>
       <tr>
         <td><code>erinnerungAn</code></td>
-        <td data-label="Sent when">when you answer the question about notifications with the reminder on, turn the reminder on or
+        <td>when you answer the question about notifications with the reminder on, turn the reminder on or
           choose a different hour</td>
-        <td data-label="Details sent with it"><code>stunde</code>: the hour of the reminder (0–23)<br>
+        <td><code>stunde</code>: the hour of the reminder (0–23)<br>
           <code>erlaubt</code>: whether iOS allows notifications for the app (<code>ja</code> or
           <code>nein</code>)</td>
       </tr>
       <tr>
         <td><code>erinnerungAus</code></td>
-        <td data-label="Sent when">when you answer the question about notifications with the reminder off, or turn the reminder off</td>
-        <td data-label="Details sent with it"><code>stunde</code>: the last chosen hour</td>
+        <td>when you turn the reminder off</td>
+        <td><code>stunde</code>: the last chosen hour</td>
       </tr>
     </tbody>
   </table>
+  </div>
   <p>Each kind of use is sent at most once per calendar day, however many pouches you log. So the events do
     not reveal how much you use. Undoing an entry sends nothing. A “Had one after all” after a craving counts
     as a craving. The events never contain amounts, limits, savings, prices, your reasons or any other text.</p>
@@ -112,40 +120,56 @@
   <h3>What TelemetryDeck adds</h3>
   <p>TelemetryDeck’s software in the app adds the following to each event:</p>
   <ul>
-    <li><strong>An anonymous identifier.</strong> It is derived from the “identifier for vendor” that iOS
+    <li><strong>A pseudonymous identifier.</strong> It is derived from the “identifier for vendor” that iOS
       assigns to the apps of one developer on one device. The app turns it into a SHA-256 hash before sending,
-      and TelemetryDeck hashes it again on its servers. It cannot be traced back to you or your Apple Account,
-      and it changes when you delete the app. The app does not use the advertising identifier and does not
+      and TelemetryDeck hashes it again on its servers. It contains neither your name nor your Apple Account,
+      but it stays the same for all events from your iPhone. It only changes when all apps from our developer
+      account have been removed from the iPhone. The app does not use the advertising identifier and does not
       track you across other apps or websites.</li>
-    <li><strong>Technical details:</strong> app version and build, device model, operating system and its
-      version, app language, preferred language, region and locale, time zone, screen size, orientation,
-      light or dark mode, text direction, accessibility settings (such as larger text, bold text or reduced
-      motion), calendar details of the time the event was created (such as weekday and hour), whether the app
-      runs from the App Store, from TestFlight or as a development build, the version of TelemetryDeck’s software, a random session number
-      and whether the event is a test.</li>
+    <li><strong>The time of sending.</strong> Because events can wait in the outbox, this may be later than
+      the use itself.</li>
+    <li><strong>Technical details:</strong> app version and build, device model, processor architecture,
+      platform, operating system and its version, app language, preferred language, region and locale, time
+      zone, screen size, orientation, light or dark mode, text direction, accessibility settings (such as
+      larger text, bold text or reduced motion), calendar details of the time of sending (such as weekday and
+      hour), whether the app runs from the App Store, from TestFlight or as a development build, for events
+      from a widget or Control Center which kind of extension sent it, the version of TelemetryDeck’s
+      software, a random session number and whether the event is a test.</li>
   </ul>
-  <p>TelemetryDeck’s automatic session statistics are switched off in Last Tin. When sending, your iPhone
-    necessarily connects to TelemetryDeck’s servers with its IP address; according to TelemetryDeck, IP
-    addresses are not stored.</p>
+  <p>TelemetryDeck’s software would also add session statistics to each event: the date of the first
+    session, the number of days and sessions with use and the length of sessions. Last Tin switches these off
+    and sends these fields empty. The software keeps its own list of the days on which it was active in the
+    app’s storage on your iPhone; that list is not sent.</p>
+  <p>When sending, your iPhone necessarily connects to TelemetryDeck’s servers with its IP address; according
+    to TelemetryDeck, IP addresses are not stored.</p>
   <p>TelemetryDeck is operated by TelemetryDeck GmbH in Augsburg, Germany, and processes the events on
-    servers in the European Union. More in
-    <a href="https://telemetrydeck.com/privacy/">TelemetryDeck’s privacy policy</a>.</p>
+    servers in the European Union. TelemetryDeck currently has no fixed schedule for deleting stored events and
+    expects to delete them after seven to ten years. More in
+    <a href="https://telemetrydeck.com/docs/guides/privacy-faq/">TelemetryDeck’s privacy FAQ</a>.</p>
+
+  <h3 id="opt-out">Turning usage events off</h3>
+  <p>You can object at any time: in the app, open Settings and turn off <strong>Share usage
+    statistics</strong>. From then on the app records and sends no events, also not from widgets or Control
+    Center, and it discards the events still waiting in the outbox. Events handed to TelemetryDeck in the
+    seconds before may still be delivered. You can turn it back on at any time.</p>
 
   <h2>Email</h2>
   <p>If you write to us, we use your email address and message only to answer you and delete them when they
     are no longer needed. The mailbox is hosted by Google (Gmail).</p>
 
   <h2>Legal basis</h2>
-  <p>Where the EU or UK General Data Protection Regulation (GDPR) applies, we process the anonymous usage
-    events on the basis of our legitimate interest in understanding whether and how the app is used, so that
-    we can improve it (Art. 6(1)(f) GDPR). Emails are processed to answer your request (Art. 6(1)(b) and (f)
-    GDPR). The data you log in the app is not processed by us at all, because it never leaves your iPhone.</p>
+  <p>Last Tin is operated from Germany, so the EU General Data Protection Regulation (GDPR) applies. We
+    process the usage events on the basis of our legitimate interest in understanding whether and how the app
+    is used, so that we can improve it (Art. 6(1)(f) GDPR); you can object with the switch described above.
+    Emails are processed to answer your request (Art. 6(1)(b) and (f) GDPR). The data you log in the app is
+    not processed by us at all, because it never leaves your iPhone.</p>
 
   <h2>Your rights</h2>
   <p>You have the right to access, rectification, erasure, restriction of processing, data portability and to
-    object to processing, and the right to lodge a complaint with a data protection authority. Because the
-    usage events are anonymous, we usually cannot tell which events are yours. To delete everything you
-    logged, delete the app. For all other requests, write to
+    object to processing, and the right to lodge a complaint with a data protection authority. To object to
+    the usage events, turn off <a href="#opt-out">Share usage statistics</a>. We cannot see which identifier
+    belongs to you, so we usually cannot find your events in TelemetryDeck on our own. To delete everything
+    you logged, delete the app. For all other requests, write to
     <a href="mailto:lasttin.app@gmail.com">lasttin.app@gmail.com</a>.</p>
 
   <h2>Age</h2>
@@ -155,7 +179,8 @@
   <p>If the app starts handling data differently, we will update this page and its date.</p>
 
   <footer>
-    <p><a href="../support/">Support</a> · <a href="../de/privacy/" hreflang="de" lang="de">Datenschutzerklärung auf Deutsch</a></p>
+    <p><a href="../support/">Support</a> · <a href="../de/privacy/" hreflang="de"
+      lang="de">Datenschutzerklärung auf Deutsch</a></p>
   </footer>
 </main>
 </body>
