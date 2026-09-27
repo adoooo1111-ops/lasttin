@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy – Last Tin</title>
-  <meta name="description" content="How Last Tin handles your data: your log stays on your iPhone, no account, few pseudonymous usage events you can turn off.">
+  <meta name="description" content="How Last Tin handles your data: your log stays on your iPhone, no account, a few pseudonymous usage events only if you agree.">
   <link rel="stylesheet" href="../style.css">
   <link rel="alternate" hreflang="en" href="https://adoooo1111-ops.github.io/lasttin/privacy/">
   <link rel="alternate" hreflang="de" href="https://adoooo1111-ops.github.io/lasttin/de/privacy/">
@@ -25,9 +25,9 @@
     <ul>
       <li>Everything you log in Last Tin stays on your iPhone. There is no account, no server of ours and no
         cloud sync.</li>
-      <li>The app sends a few usage events under a pseudonymous identifier to the analytics service
-        TelemetryDeck, for example “the app was used today”. They never contain amounts, texts, reasons or
-        prices, and you can turn them off in the app.</li>
+      <li>Only if you agree, the app sends a few usage events under a pseudonymous identifier to the analytics
+        service TelemetryDeck, for example “the app was used today”. They never contain amounts, texts, reasons or
+        prices, and you can withdraw your consent in the app at any time.</li>
       <li>Payments are handled entirely by Apple.</li>
     </ul>
   </div>
@@ -73,8 +73,9 @@
 
   <h2 id="usage-events">Usage events</h2>
   <p>To know whether Last Tin is useful, for example whether people who started the free trial still use it a
-    week later, the app sends a few usage events to TelemetryDeck under a pseudonymous identifier (see below).
-    We only look at aggregated numbers.</p>
+    week later, the app sends a few usage events to TelemetryDeck under a pseudonymous identifier (see below),
+    but only if you have agreed (see <a href="#consent">Your consent</a>). We only look at aggregated
+    numbers.</p>
 
   <h3 id="events">The complete list of events</h3>
   <div class="tabelle">
@@ -148,11 +149,13 @@
     expects to delete them after seven to ten years. More in
     <a href="https://telemetrydeck.com/docs/guides/privacy-faq/">TelemetryDeck’s privacy FAQ</a>.</p>
 
-  <h3 id="opt-out">Turning usage events off</h3>
-  <p>You can object at any time: in the app, open Settings and turn off <strong>Share usage
-    statistics</strong>. From then on the app records and sends no events, also not from widgets or Control
-    Center, and it discards the events still waiting in the outbox. Events handed to TelemetryDeck in the
-    seconds before may still be delivered. You can turn it back on at any time.</p>
+  <h3 id="consent">Your consent</h3>
+  <p>During setup, the app asks whether you want to share usage statistics. Only if you agree does it record
+    and send usage events; if you don’t, it sends none. You can change your choice at any time: in the app,
+    open Settings and turn <strong>Share usage statistics</strong> on or off. Once you turn it off, the app
+    records and sends no more events, also not from widgets or Control Center, and it discards the events
+    still waiting in the outbox. Events handed to TelemetryDeck in the seconds before may still be delivered.
+    Withdrawing your consent does not affect the processing that took place before.</p>
 
   <h2>Email</h2>
   <p>If you write to us, we use your email address and message only to answer you and delete them when they
@@ -160,15 +163,18 @@
 
   <h2>Legal basis</h2>
   <p>Last Tin is operated from Germany, so the EU General Data Protection Regulation (GDPR) applies. We
-    process the usage events on the basis of our legitimate interest in understanding whether and how the app
-    is used, so that we can improve it (Art. 6(1)(f) GDPR); you can object with the switch described above.
-    Emails are processed to answer your request (Art. 6(1)(b) and (f) GDPR). The data you log in the app is
-    not processed by us at all, because it never leaves your iPhone.</p>
+    process the usage events only with your consent (Art. 6(1)(a) GDPR). Storing and reading the information
+    on your iPhone that this requires, such as the identifier for vendor and the outbox, is based on the same
+    consent (Section 25(1) of the German Telecommunications Digital Services Data Protection Act, TDDDG). You
+    can withdraw your consent at any time with the switch described above. Emails are processed to answer
+    your request (Art. 6(1)(b) and (f) GDPR). The data you log in the app is not processed by us at all,
+    because it never leaves your iPhone.</p>
 
   <h2>Your rights</h2>
   <p>You have the right to access, rectification, erasure, restriction of processing, data portability and to
-    object to processing, and the right to lodge a complaint with a data protection authority. To object to
-    the usage events, turn off <a href="#opt-out">Share usage statistics</a>. We cannot see which identifier
+    object to processing, the right to withdraw your consent at any time and the right to lodge a complaint
+    with a data protection authority. To withdraw your consent to the usage events, turn off
+    <a href="#consent">Share usage statistics</a>. We cannot see which identifier
     belongs to you, so we usually cannot find your events in TelemetryDeck on our own. To delete everything
     you logged, delete the app. For all other requests, write to
     <a href="mailto:lasttin.app@gmail.com">lasttin.app@gmail.com</a>.</p>
