@@ -45,9 +45,10 @@
     <li>your reasons, in your own words,</li>
     <li>your reminder settings.</li>
   </ul>
-  <p>The app keeps this data in a storage area on your iPhone that only Last Tin and its widgets can use.
-    We have no access to it, and nothing of it is sent to us or anyone else. There is no account and no
-    sync with iCloud or other devices.</p>
+  <p>The app keeps this data in a storage area on your iPhone that only Last Tin and its widgets can use. We
+    have no access to it, and nothing of it is sent to us or anyone else, except the hour of the reminder and
+    whether it is on, which the usage events described below report if you have agreed. There is no account
+    and no sync with iCloud or other devices.</p>
   <p>If you back up your iPhone with iCloud Backup or on a computer, iOS includes this data in the backup,
     as it does for other apps. That backup is handled by Apple, not by us. If you delete the app, the data is
     deleted with it, and we cannot restore it.</p>
@@ -114,11 +115,14 @@
   </div>
   <p>Use is sent at most once per calendar day, however many pouches you log and whatever you do in the app.
     So <code>nutzung</code> reveals neither how much you use nor whether you used nicotine on a day, only that
-    the app was used. The reminder events reveal your reminder settings as listed above, and nothing about your
-    use. Undoing an entry sends nothing. The events never contain amounts, limits, savings, prices, your
-    reasons or any other text.</p>
+    the app was used on that day and how many days after the start of your free trial that was. The reminder
+    events reveal what is listed for them above (the hour, whether the reminder is on and whether
+    notifications are allowed), but nothing about your use of nicotine. Undoing an entry sends nothing. The
+    events never contain amounts, limits, savings, prices, your reasons or any other text.</p>
   <p>Events first wait in a small outbox on your iPhone until they have been handed to TelemetryDeck. This way
-    none is lost when you are offline, though one may occasionally arrive twice.</p>
+    none is lost when you are offline for a while, though one may occasionally arrive twice. The outbox holds
+    up to 100 events, enough for about three months without a connection; beyond that, the oldest ones are
+    dropped.</p>
 
   <h3>What TelemetryDeck adds</h3>
   <p>TelemetryDeck’s software in the app adds the following to each event:</p>
@@ -133,15 +137,16 @@
       the use itself.</li>
     <li><strong>Technical details:</strong> app version and build, device model, processor architecture,
       platform, operating system and its version, app language, preferred language, region and locale, time
-      zone, screen size, orientation, light or dark mode, text direction, calendar details of the time of
-      sending (such as weekday and hour), whether the app runs from the App Store, from TestFlight or as a
-      development build, for events from a widget or Control Center which kind of extension sent it, the
+      zone, screen size and scale, orientation, light or dark mode, text direction, calendar details of the
+      time of sending (such as weekday and hour), whether the app runs from the App Store, from TestFlight or
+      as a development build, for events from a widget or Control Center which kind of extension sent it, the
       version of TelemetryDeck’s software, a random session number and whether the event is a test.</li>
   </ul>
-  <p>TelemetryDeck’s software would also add session statistics to each event: the date of the first
-    session, the number of days and sessions with use and the length of sessions. Last Tin switches these off
-    and sends these fields empty. The software keeps its own list of the days on which it was active in the
-    app’s storage on your iPhone; that list is not sent.</p>
+  <p>TelemetryDeck’s software would also add session statistics to each event: the date of the first session,
+    the number of days and sessions with use and the length of sessions. Last Tin sends these fields empty. It
+    does the same with the accessibility settings the software would add, such as bold text, text size or
+    reduced motion. The software keeps its own list of the days on which it was active in the app’s storage on
+    your iPhone; that list is not sent.</p>
   <p>When sending, your iPhone necessarily connects to TelemetryDeck’s servers with its IP address; according
     to TelemetryDeck, IP addresses are not stored.</p>
   <p>TelemetryDeck is operated by TelemetryDeck GmbH in Augsburg, Germany, and processes the events on

@@ -47,7 +47,9 @@
   </ul>
   <p>Die App legt diese Daten in einem Speicherbereich auf deinem iPhone ab, den nur Last Tin und seine
     Widgets nutzen können. Wir haben keinen Zugriff darauf, und nichts davon wird an uns oder an andere
-    gesendet. Es gibt kein Konto und keinen Abgleich mit iCloud oder anderen Geräten.</p>
+    gesendet, außer der Stunde der Erinnerung und ob sie an ist; das melden die unten beschriebenen
+    Nutzungsereignisse, wenn du eingewilligt hast. Es gibt kein Konto und keinen Abgleich mit iCloud oder
+    anderen Geräten.</p>
   <p>Sicherst du dein iPhone mit dem iCloud-Backup oder auf einem Computer, nimmt iOS diese Daten wie bei
     anderen Apps in die Sicherung auf. Diese Sicherung verantwortet Apple, nicht wir. Löschst du die App,
     werden die Daten mit gelöscht, und wir können sie nicht wiederherstellen.</p>
@@ -114,12 +116,15 @@
   </div>
   <p>Eine Nutzung geht höchstens einmal am Kalendertag hinaus, egal wie viele Beutel du einträgst und was du
     in der App machst. <code>nutzung</code> verrät also weder, wie viel du nimmst, noch, ob du an einem Tag
-    Nikotin genommen hast, nur, dass die App genutzt wurde. Die Ereignisse zur Erinnerung verraten deren oben
-    aufgeführte Einstellungen, aber nichts über deine Nutzung. Das Zurücknehmen eines Eintrags sendet nichts. Die
-    Ereignisse enthalten nie Mengen, Limits, Ersparnis, Preise, deine Gründe oder andere Texte.</p>
+    Nikotin genommen hast, nur, dass die App an diesem Tag genutzt wurde und am wievielten Tag seit dem Start
+    deiner Gratistage. Die Ereignisse zur Erinnerung verraten, was oben für sie aufgeführt ist (die Stunde, ob
+    die Erinnerung an ist und ob Mitteilungen erlaubt sind), aber nichts darüber, ob du Nikotin nimmst. Das
+    Zurücknehmen eines Eintrags sendet nichts. Die Ereignisse enthalten nie Mengen, Limits, Ersparnis, Preise,
+    deine Gründe oder andere Texte.</p>
   <p>Ereignisse warten zuerst in einem kleinen Ausgangskorb auf deinem iPhone, bis sie an TelemetryDeck
-    übergeben sind. So geht keines verloren, wenn du offline bist; dafür kann eines gelegentlich zweimal
-    ankommen.</p>
+    übergeben sind. So geht keines verloren, wenn du eine Weile offline bist; dafür kann eines gelegentlich
+    zweimal ankommen. Der Ausgangskorb fasst bis zu 100 Ereignisse, genug für rund drei Monate ohne
+    Verbindung; darüber hinaus fallen die ältesten weg.</p>
 
   <h3>Was TelemetryDeck ergänzt</h3>
   <p>Die Software von TelemetryDeck in der App fügt jedem Ereignis Folgendes hinzu:</p>
@@ -134,16 +139,18 @@
       später liegen als die Nutzung selbst.</li>
     <li><strong>Technische Angaben:</strong> App-Version und Build, Gerätemodell, Prozessorarchitektur,
       Plattform, Betriebssystem und seine Version, Sprache der App, bevorzugte Sprache, Region und
-      Gebietsschema, Zeitzone, Bildschirmgröße, Ausrichtung, heller oder dunkler Modus, Schreibrichtung,
-      Kalenderangaben zum Zeitpunkt des Sendens (etwa Wochentag und Stunde), ob die App aus dem App Store, aus
-      TestFlight oder als Entwicklungsversion läuft, bei Ereignissen aus einem Widget oder dem Kontrollzentrum
-      die Art der Erweiterung, die es gesendet hat, die Version der TelemetryDeck-Software, eine zufällige
-      Sitzungsnummer und ob es ein Testereignis ist.</li>
+      Gebietsschema, Zeitzone, Bildschirmgröße und Skalierung, Ausrichtung, heller oder dunkler Modus,
+      Schreibrichtung, Kalenderangaben zum Zeitpunkt des Sendens (etwa Wochentag und Stunde), ob die App aus
+      dem App Store, aus TestFlight oder als Entwicklungsversion läuft, bei Ereignissen aus einem Widget oder
+      dem Kontrollzentrum die Art der Erweiterung, die es gesendet hat, die Version der
+      TelemetryDeck-Software, eine zufällige Sitzungsnummer und ob es ein Testereignis ist.</li>
   </ul>
   <p>Die Software von TelemetryDeck würde jedem Ereignis außerdem eine Sitzungsstatistik beifügen: das Datum
     der ersten Sitzung, die Zahl der Tage und Sitzungen mit Nutzung und die Dauer der Sitzungen. Last Tin
-    schaltet das ab und sendet diese Felder leer. Eine eigene Liste der Tage, an denen sie aktiv war, führt die
-    Software im Speicher der App auf deinem iPhone; diese Liste wird nicht gesendet.</p>
+    sendet diese Felder leer. Genauso verfährt Last Tin mit den Einstellungen der Bedienungshilfen, die die
+    Software beifügen würde, etwa fetter Text, Textgröße oder reduzierte Bewegung. Eine eigene Liste der Tage,
+    an denen sie aktiv war, führt die Software im Speicher der App auf deinem iPhone; diese Liste wird nicht
+    gesendet.</p>
   <p>Beim Senden verbindet sich dein iPhone zwangsläufig mit seiner IP-Adresse mit den Servern von
     TelemetryDeck; laut TelemetryDeck werden IP-Adressen nicht gespeichert.</p>
   <p>TelemetryDeck wird von der TelemetryDeck GmbH in Augsburg betrieben und verarbeitet die Ereignisse auf
