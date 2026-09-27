@@ -26,7 +26,7 @@
       <li>Alles, was du in Last Tin festhältst, bleibt auf deinem iPhone. Es gibt kein Konto, keinen eigenen
         Server und keinen Abgleich über die Cloud.</li>
       <li>Die App sendet einige Nutzungsereignisse unter einer pseudonymen Kennung an den Analysedienst
-        TelemetryDeck, etwa „heute wurde etwas eingetragen“. Sie enthalten nie Mengen, Texte, Gründe oder
+        TelemetryDeck, etwa „heute wurde die App genutzt“. Sie enthalten nie Mengen, Texte, Gründe oder
         Preise, und du kannst sie in der App abschalten.</li>
       <li>Die Bezahlung wickelt allein Apple ab.</li>
     </ul>
@@ -91,12 +91,10 @@
       </tr>
       <tr>
         <td><code>nutzung</code></td>
-        <td>du einen Eintrag machst, ein Verlangen festhältst oder einen Null-Tag bestätigst – jede Art
-          höchstens einmal am Tag</td>
-        <td><code>art</code>: welche Art (<code>eintrag</code>, <code>verlangen</code>,
-          <code>nullTag</code>)<br>
-          <code>tageSeitTestStart</code>: ganze Zahl der Kalendertage seit dem Start deiner Gratistage, der Tag
-          des Starts ist Tag 0; fehlt, wenn der Start unbekannt ist</td>
+        <td>du einen Eintrag machst, ein Verlangen festhältst oder einen Null-Tag bestätigst – höchstens einmal
+          am Tag und ohne zu sagen, was davon</td>
+        <td><code>tageSeitTestStart</code>: ganze Zahl der Kalendertage seit dem Start deiner Gratistage, der
+          Tag des Starts ist Tag 0; fehlt, wenn der Start unbekannt ist</td>
       </tr>
       <tr>
         <td><code>erinnerungAn</code></td>
@@ -113,10 +111,10 @@
     </tbody>
   </table>
   </div>
-  <p>Jede Art der Nutzung geht höchstens einmal am Kalendertag hinaus, egal wie viele Beutel du einträgst. Die
-    Ereignisse verraten also nicht, wie viel du nimmst. Das Zurücknehmen eines Eintrags sendet nichts. Ein
-    „Doch genommen“ nach einem Verlangen zählt als Verlangen. Die Ereignisse enthalten nie Mengen, Limits,
-    Ersparnis, Preise, deine Gründe oder andere Texte.</p>
+  <p>Eine Nutzung geht höchstens einmal am Kalendertag hinaus, egal wie viele Beutel du einträgst und was du
+    in der App machst. Die Ereignisse verraten also weder, wie viel du nimmst, noch, ob du an einem Tag Nikotin
+    genommen hast, nur, dass die App genutzt wurde. Das Zurücknehmen eines Eintrags sendet nichts. Die
+    Ereignisse enthalten nie Mengen, Limits, Ersparnis, Preise, deine Gründe oder andere Texte.</p>
   <p>Ereignisse warten zuerst in einem kleinen Ausgangskorb auf deinem iPhone, bis sie an TelemetryDeck
     übergeben sind. So geht keines verloren, wenn du offline bist; dafür kann eines gelegentlich zweimal
     ankommen.</p>

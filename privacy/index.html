@@ -26,7 +26,7 @@
       <li>Everything you log in Last Tin stays on your iPhone. There is no account, no server of ours and no
         cloud sync.</li>
       <li>The app sends a few usage events under a pseudonymous identifier to the analytics service
-        TelemetryDeck, for example “an entry was made today”. They never contain amounts, texts, reasons or
+        TelemetryDeck, for example “the app was used today”. They never contain amounts, texts, reasons or
         prices, and you can turn them off in the app.</li>
       <li>Payments are handled entirely by Apple.</li>
     </ul>
@@ -90,11 +90,10 @@
       </tr>
       <tr>
         <td><code>nutzung</code></td>
-        <td>when you add an entry, note a craving or confirm a zero day – each kind at most once a day</td>
-        <td><code>art</code>: which kind (<code>eintrag</code> entry, <code>verlangen</code> craving,
-          <code>nullTag</code> zero day)<br>
-          <code>tageSeitTestStart</code>: whole number of calendar days since your trial started, the day of the
-          start being day 0; missing if the start is unknown</td>
+        <td>when you add an entry, note a craving or confirm a zero day – at most once a day, without saying
+          which of these it was</td>
+        <td><code>tageSeitTestStart</code>: whole number of calendar days since your trial started, the day of
+          the start being day 0; missing if the start is unknown</td>
       </tr>
       <tr>
         <td><code>erinnerungAn</code></td>
@@ -112,9 +111,10 @@
     </tbody>
   </table>
   </div>
-  <p>Each kind of use is sent at most once per calendar day, however many pouches you log. So the events do
-    not reveal how much you use. Undoing an entry sends nothing. A “Had one after all” after a craving counts
-    as a craving. The events never contain amounts, limits, savings, prices, your reasons or any other text.</p>
+  <p>Use is sent at most once per calendar day, however many pouches you log and whatever you do in the app.
+    So the events reveal neither how much you use nor whether you used nicotine on a day, only that the app
+    was used. Undoing an entry sends nothing. The events never contain amounts, limits, savings, prices, your
+    reasons or any other text.</p>
   <p>Events first wait in a small outbox on your iPhone until they have been handed to TelemetryDeck. This way
     none is lost when you are offline, though one may occasionally arrive twice.</p>
 
